@@ -75,8 +75,13 @@ struct MaxFlow {
 				cap[i] -= f;
 				cap[i^1] += f;
 				a -= f;
-				if (a == 0) break;
+				//if (a == 0) break;
+				if （a == 0) {
+					return flow;
+				}
 			}
+		dist[u] = -1;
+		// 原来我写了两年的网络流算法都是错的 = = 膜拜wmj大爷
 		return flow;
 	}
 
